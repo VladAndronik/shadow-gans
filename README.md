@@ -1,18 +1,8 @@
 
 ## Research on using GANs for shadow removal
-
-### Architectures
-
-* **U-GAT-IT**
-	* Paper: https://arxiv.org/pdf/1907.10830v1.pdf#page9
-	* Original implementation: https://github.com/znxlwm/UGATIT-pytorch/blob/master/README.md
-
-* **Mask-ShadowGAN**
-	* Paper: https://arxiv.org/pdf/1903.10683
-	* Original implementation: https://github.com/xw-hu/Mask-ShadowGAN
-
-## Research on using GANs for shadow removal
 This work presents the solution to shadow removal task using generative adversarial networks. Our approach is trained in unsupervised fashion which means it does not depend on time-consuming data collection and annotation. This together with training in a single end-to-end framework significantly raises its practical relevance. By exploiting attention modules and multi context feature aggregation using dilated convolutions our method gives significant results compared to existing solutions in the field.
+
+_In this repository we have presented all the experiments conducted during the research while the final solution is located in /mask-shadow/notebooks/cam-attention/cross/input/cross-1_input_attn_mask_transfer.ipynb_
 
 ### Approach
 Approach consists of two GANs where the first one is used for shadow removal while the other one is generating the shadows for cycle consistency. We added multi context aggregation with the use of dilated convolutions to both generators because we argue that this helps use background information in a more efficient way to fill up the removed shadow region. 
@@ -37,6 +27,4 @@ Given the results we obtained after the experiments we have seen a strong eviden
 
 ### References
 [1] - https://arxiv.org/pdf/1907.10830v1.pdf#page9
-
-
 
